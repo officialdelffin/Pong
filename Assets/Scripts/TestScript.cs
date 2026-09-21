@@ -5,15 +5,15 @@ public class TestScript : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
 
-        print("Camera started");
+        Debug.Log("A camera foi ligada!");
     
     }
 
     // Update is called once per frame
     void Update() {
 
-        print("Camera working");
-        
+        Debug.Log("A camera está acompanhando o personagem!");
+
     }
 
 }
