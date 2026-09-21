@@ -4,7 +4,7 @@ using UnityEngine;
 public class TestScript : MonoBehaviour {
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Function called when the script is first run :
     void Start() {
 
 
@@ -14,7 +14,7 @@ public class TestScript : MonoBehaviour {
     }
 
 
-    // Update is called once per frame
+    // Function called once per frame :
     void Update() {
 
 
