@@ -18,6 +18,7 @@ public class TestScript : MonoBehaviour {
     void Update() {
 
 
+        Debug.Log("Teste");
         Debug.Log("A camera está gravando!");
         Debug.LogWarning("A camera está descarregando!");
         Debug.LogError("A camera descarregou!");
