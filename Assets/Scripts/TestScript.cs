@@ -8,7 +8,7 @@ public class TestScript : MonoBehaviour {
     void Start() {
 
 
-        Debug.Log("A camera foi ligada!");
+        
     
 
     }
@@ -18,9 +18,7 @@ public class TestScript : MonoBehaviour {
     void Update() {
 
 
-        Debug.Log("A camera está gravando!");
-        Debug.LogWarning("A camera está descarregando!");
-        Debug.LogError("A camera descarregou!");
+
 
 
     }
