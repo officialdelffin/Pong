@@ -40,7 +40,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the movement of the racket :
-        if (verticalPosition > boundary){
+        if (verticalPosition < boundary){
 
             
             if (Input.GetKey(KeyCode.UpArrow))
@@ -57,7 +57,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the movement of the racket :
-        if (verticalPosition < -boundary){
+        if (verticalPosition > -boundary){
 
             
             if (Input.GetKey(KeyCode.DownArrow)) {
