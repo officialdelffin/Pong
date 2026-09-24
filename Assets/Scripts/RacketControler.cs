@@ -7,6 +7,7 @@ public class RacketControler : MonoBehaviour{
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
+    private float boundary;
 
 
 
@@ -23,6 +24,10 @@ public class RacketControler : MonoBehaviour{
         speed = 5f;
 
 
+        // Defining the boundary of the racket :
+        boundary = 3.5f;
+
+
     }
 
     // Function that runs every frame :
@@ -35,22 +40,35 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the movement of the racket :
-        if (Input.GetKey(KeyCode.UpArrow)){
+        if (verticalPosition > boundary){
+
+            
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
 
 
-            verticalPosition = verticalPosition + speed * Time.deltaTime;
+                verticalPosition = verticalPosition + speed * Time.deltaTime;
+
+
+            }
 
 
         }
 
 
         // Defining the movement of the racket :
-        else if (Input.GetKey(KeyCode.DownArrow)){
-        
-        
-            verticalPosition = verticalPosition - speed * Time.deltaTime;
-        
-        
+        if (verticalPosition < -boundary){
+
+            
+            if (Input.GetKey(KeyCode.DownArrow)) {
+
+
+                verticalPosition = verticalPosition - speed * Time.deltaTime;
+
+
+            }
+
+
         }
 
         
