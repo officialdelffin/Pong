@@ -23,29 +23,29 @@ public class RacketControler : MonoBehaviour{
     void Update(){
 
 
+        // Defining that the y axis will be equal to the vertical position :
         movimentsPositions.y = verticalPosition;
         transform.position = movimentsPositions;
 
 
+        // Defining the movement of the racket :
         if (Input.GetKey(KeyCode.UpArrow)){
 
 
-            verticalPosition = verticalPosition + 0.5f;
+            verticalPosition = verticalPosition + 0.5f * Time.deltaTime;
 
 
         }
 
 
+        // Defining the movement of the racket :
         else if (Input.GetKey(KeyCode.DownArrow)){
         
         
-            verticalPosition = verticalPosition - 0.5f;
+            verticalPosition = verticalPosition - 0.5f * Time.deltaTime;
         
         
         }
-
-
-        Debug.Log(transform.position.y);
 
         
     }
