@@ -13,8 +13,8 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the default position of the x and z axes :
-        movimentsPositions.x = -7.5f;
-        movimentsPositions.z = 0f;
+        movimentsPositions.x = transform.position.x;
+        movimentsPositions.z = transform.position.z;
 
 
     }
@@ -25,6 +25,24 @@ public class RacketControler : MonoBehaviour{
 
         movimentsPositions.y = verticalPosition;
         transform.position = movimentsPositions;
+
+
+        if (Input.GetKey(KeyCode.UpArrow)){
+
+
+            verticalPosition = verticalPosition + 0.5f;
+
+
+        }
+
+
+        else if (Input.GetKey(KeyCode.DownArrow)){
+        
+        
+            verticalPosition = verticalPosition - 0.5f;
+        
+        
+        }
 
 
         Debug.Log(transform.position.y);
