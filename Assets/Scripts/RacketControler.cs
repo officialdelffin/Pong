@@ -32,7 +32,7 @@ public class RacketControler : MonoBehaviour{
         if (Input.GetKey(KeyCode.UpArrow)){
 
 
-            verticalPosition = verticalPosition + 0.5f * Time.deltaTime;
+            verticalPosition = verticalPosition + 5f * Time.deltaTime;
 
 
         }
@@ -42,7 +42,7 @@ public class RacketControler : MonoBehaviour{
         else if (Input.GetKey(KeyCode.DownArrow)){
         
         
-            verticalPosition = verticalPosition - 0.5f * Time.deltaTime;
+            verticalPosition = verticalPosition - 5f * Time.deltaTime;
         
         
         }
