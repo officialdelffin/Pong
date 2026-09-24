@@ -5,7 +5,9 @@ public class RacketControler : MonoBehaviour{
 
     // Attributes :
     private Vector3 movimentsPositions;
-    private float verticalPosition;  
+    private float verticalPosition;
+    private float speed;
+
 
 
     // Function that runs once when the game starts :
@@ -15,6 +17,10 @@ public class RacketControler : MonoBehaviour{
         // Defining the default position of the x and z axes :
         movimentsPositions.x = transform.position.x;
         movimentsPositions.z = transform.position.z;
+
+
+        // Defining the speed of the racket :
+        speed = 5f;
 
 
     }
@@ -32,7 +38,7 @@ public class RacketControler : MonoBehaviour{
         if (Input.GetKey(KeyCode.UpArrow)){
 
 
-            verticalPosition = verticalPosition + 5f * Time.deltaTime;
+            verticalPosition = verticalPosition + speed * Time.deltaTime;
 
 
         }
@@ -42,7 +48,7 @@ public class RacketControler : MonoBehaviour{
         else if (Input.GetKey(KeyCode.DownArrow)){
         
         
-            verticalPosition = verticalPosition - 5f * Time.deltaTime;
+            verticalPosition = verticalPosition - speed * Time.deltaTime;
         
         
         }
