@@ -20,7 +20,7 @@ public class BallControler : MonoBehaviour{
 
         // Defining the initial speed and assingning the speedBall variable :
         speed = 5f;
-        speedBall.x = speed;
+        speedBall.x = -speed;
 
 
 
