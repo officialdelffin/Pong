@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd6605f4be8c624bb0c695cc42c80f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RacketControler
-  racket: {fileID: 0}
+  racket: {fileID: 592487001}
 --- !u!1 &668939402
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd6605f4be8c624bb0c695cc42c80f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RacketControler
-  racket: {fileID: 0}
+  racket: {fileID: 849187867}
 --- !u!61 &849187869
 BoxCollider2D:
   m_ObjectHideFlags: 0
