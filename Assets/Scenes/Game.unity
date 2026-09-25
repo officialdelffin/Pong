@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 668939403}
   - component: {fileID: 668939406}
   - component: {fileID: 668939405}
+  - component: {fileID: 668939407}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -357,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 668939402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.48, y: 3.79, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -414,7 +415,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -426,6 +427,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &668939407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668939402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351368d2f6a5bbf47bd84bcfb9b7e5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallControler
+  rigidboryBall: {fileID: 668939406}
+  speedBall: {x: -5, y: 0}
 --- !u!1 &822161086
 GameObject:
   m_ObjectHideFlags: 0
