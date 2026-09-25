@@ -5,8 +5,8 @@ public class BallControler : MonoBehaviour{
 
 
     // Atributes :
-    public Rigidbody2D rigidboryBall;
-    public Vector2 speedBall;
+    private Rigidbody2D rigidboryBall;
+    private Vector2 speedBall;
 
 
     // Function that runs once when the game starts :
