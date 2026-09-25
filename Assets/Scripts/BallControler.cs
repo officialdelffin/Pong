@@ -5,7 +5,8 @@ public class BallControler : MonoBehaviour{
 
 
     // Atributes :
-    private Rigidbody2D rigidboryBall;
+    public Rigidbody2D rigidboryBall;
+    public float speed;
     private Vector2 speedBall;
 
 
@@ -15,6 +16,12 @@ public class BallControler : MonoBehaviour{
 
         // Defining the initial position of the ball :
         transform.position = new Vector3(0, 0, 0);
+
+
+        // Defining the initial speed and assingning the speedBall variable :
+        speed = 5f;
+        speedBall.x = speed;
+
 
 
         // Defining the initial speed of the ball :
