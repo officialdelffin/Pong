@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Racket
+      name: LeftRaquete
       rect:
         serializedVersion: 2
         x: 0
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Racket: -5433374106829458743
+      LeftRaquete: -5433374106829458743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RacketControler : MonoBehaviour{
 
 
     // Attributes :
+    public GameObject racket;
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
@@ -31,7 +33,8 @@ public class RacketControler : MonoBehaviour{
     }
 
     // Function that runs every frame :
-    void Update(){
+    void Update()
+    {
 
 
         // Defining that the y axis will be equal to the vertical position :
@@ -39,15 +42,42 @@ public class RacketControler : MonoBehaviour{
         transform.position = movimentsPositions;
 
 
-        // Defining the movement of the racket :
-        if (verticalPosition < boundary){
+        // Defining the racket that will be used :
+        if (racket.name == "LeftRacket")
+        {
 
-            
-            if (Input.GetKey(KeyCode.UpArrow))
+
+            // Defining the movement of the racket :
+            if (verticalPosition < boundary)
             {
 
 
-                verticalPosition = verticalPosition + speed * Time.deltaTime;
+                if (Input.GetKey(KeyCode.W))
+                {
+
+
+                    verticalPosition = verticalPosition + speed * Time.deltaTime;
+
+
+                }
+
+
+            }
+
+
+            // Defining the movement of the racket :
+            if (verticalPosition > -boundary)
+            {
+
+
+                if (Input.GetKey(KeyCode.S))
+                {
+
+
+                    verticalPosition = verticalPosition - speed * Time.deltaTime;
+
+
+                }
 
 
             }
@@ -56,14 +86,41 @@ public class RacketControler : MonoBehaviour{
         }
 
 
-        // Defining the movement of the racket :
-        if (verticalPosition > -boundary){
+        // Defining the racket that will be used :
+        else if (racket.name == "RightRacket")
+        {
 
-            
-            if (Input.GetKey(KeyCode.DownArrow)) {
+            // Defining the movement of the racket :
+            if (verticalPosition < boundary)
+            {
 
 
-                verticalPosition = verticalPosition - speed * Time.deltaTime;
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+
+
+                    verticalPosition = verticalPosition + speed * Time.deltaTime;
+
+
+                }
+
+
+            }
+
+
+            // Defining the movement of the racket :
+            if (verticalPosition > -boundary)
+            {
+
+
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+
+
+                    verticalPosition = verticalPosition - speed * Time.deltaTime;
+
+
+                }
 
 
             }
@@ -71,8 +128,9 @@ public class RacketControler : MonoBehaviour{
 
         }
 
-        
+
     }
+
 
 
 }
