@@ -5,14 +5,12 @@ public class RacketControler : MonoBehaviour{
 
 
     // Attributes :
-    public GameObject racket;
+    public bool leftRacket;
+    public bool rightRacket;
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
     private float boundary;
-    private string leftRacketName;
-    private string rightRacketName;
-
 
 
     // Function that runs once when the game starts :
@@ -32,11 +30,6 @@ public class RacketControler : MonoBehaviour{
         boundary = 3.5f;
 
 
-        // Defining the name of the rackets :
-        leftRacketName = "LeftRacket";
-        rightRacketName = "RightRacket";
-
-
     }
 
     // Function that runs every frame :
@@ -50,7 +43,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the racket that will be used :
-        if (racket.name == leftRacketName)
+        if (leftRacket)
         {
 
 
@@ -94,7 +87,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the racket that will be used :
-        else if (racket.name == rightRacketName)
+        else if (rightRacket)
         {
 
             // Defining the movement of the racket :
