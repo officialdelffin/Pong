@@ -1,5 +1,6 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class BallControler : MonoBehaviour{
@@ -91,23 +92,25 @@ public class BallControler : MonoBehaviour{
     {
 
 
-        // Defining action when the ball out of the horizontal boundary :
+        // Defining action when the ball out of the horizontal boundary and reseting the scene :
         if (transform.position.x > boundaryHorizontal)
         {
 
 
             Debug.Log("Raquete da esquedar venceu!");
+            SceneManager.LoadScene(0);
 
 
         }
 
 
-        // Defining action when the ball out of the horizontal boundary :
+        // Defining action when the ball out of the horizontal boundary and reseting the scene :
         if (transform.position.x < -boundaryHorizontal)
         {
 
 
             Debug.Log("Raquete da direita venceu!");
+            SceneManager.LoadScene(0);
 
 
         }
