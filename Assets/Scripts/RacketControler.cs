@@ -8,6 +8,7 @@ public class RacketControler : MonoBehaviour{
     public bool leftRacketPlayer;
     public bool rightRacketPlayer;
     public bool rightRacketAuto;
+    public Transform ballPosition;
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
@@ -137,7 +138,12 @@ public class RacketControler : MonoBehaviour{
         { 
         
         
-           Debug.Log("Auto racket is working");
+            // Getting the posittion y of the ball :
+            float ballPositionY = ballPosition.position.y;
+
+
+            // Defining the movement of the racket based on the ball's position y :
+            transform.position = new Vector3(transform.position.x, ballPositionY, transform.position.z);
 
 
         }
