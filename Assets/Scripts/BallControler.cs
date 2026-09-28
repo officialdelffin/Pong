@@ -13,7 +13,8 @@ public class BallControler : MonoBehaviour{
 
 
     // Function that runs once when the game starts :
-    void Start() {
+    void Start()    
+    {
 
 
         // Defining the initial position of the ball and the speed ball :
@@ -22,7 +23,7 @@ public class BallControler : MonoBehaviour{
 
 
         // Defining the random direction of the ball :
-        direction = Random.Range(0, 3);
+        direction = Random.Range(0, 4);
 
 
         // If the direction is equal to 0 :
@@ -81,13 +82,8 @@ public class BallControler : MonoBehaviour{
 
 
     // Function that runs every frame :
-    void Update(){
-
-
-
-
-        
-    }
+    void Update()
+    { }
 
 
 }

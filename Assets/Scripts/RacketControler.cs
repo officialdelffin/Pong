@@ -5,8 +5,9 @@ public class RacketControler : MonoBehaviour{
 
 
     // Attributes :
-    public bool leftRacket;
-    public bool rightRacket;
+    public bool leftRacketPlayer;
+    public bool rightRacketPlayer;
+    public bool rightRacketAuto;
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
@@ -14,7 +15,8 @@ public class RacketControler : MonoBehaviour{
 
 
     // Function that runs once when the game starts :
-    void Start(){
+    void Start()
+    {
 
 
         // Defining the default position of the x and z axes :
@@ -32,6 +34,7 @@ public class RacketControler : MonoBehaviour{
 
     }
 
+
     // Function that runs every frame :
     void Update()
     {
@@ -43,7 +46,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the racket that will be used :
-        if (leftRacket)
+        if (leftRacketPlayer)
         {
 
 
@@ -87,7 +90,7 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the racket that will be used :
-        else if (rightRacket)
+        else if (rightRacketPlayer)
         {
 
             // Defining the movement of the racket :
@@ -124,6 +127,17 @@ public class RacketControler : MonoBehaviour{
 
 
             }
+
+
+        }
+
+
+        // Defining the racket that will be used and is automated for computer :
+        else if (rightRacketAuto)
+        { 
+        
+        
+           Debug.Log("Auto racket is working");
 
 
         }
