@@ -29,7 +29,7 @@ public class RacketControler : MonoBehaviour{
         speed = 5f;
 
 
-        // Defining the boundary of the racket :
+        // Defining the boundary of the wall :
         boundaryVertical = 3.5f;
 
 
@@ -51,8 +51,8 @@ public class RacketControler : MonoBehaviour{
         transform.position = movimentsPositions;
 
 
-        // Defining the racket that will be used :
-        if (leftRacketPlayer)
+            // Defining the racket that will be used :
+            if (leftRacketPlayer)
         {
 
 

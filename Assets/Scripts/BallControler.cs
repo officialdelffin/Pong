@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,7 @@ public class BallControler : MonoBehaviour{
 
     // Atributes :
     public Rigidbody2D rigidboryBall;
+    public AudioClip audioCollider;
     private float boundaryHorizontal;
     private float direction;
     private float speed;
@@ -114,8 +116,19 @@ public class BallControler : MonoBehaviour{
 
 
         }
+    
+    
+    }
 
 
+    // Action when the ball collides with the racket or the wall :
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+
+        AudioSource.PlayClipAtPoint(audioCollider, transform.position);
+
+        
     }
 
 
