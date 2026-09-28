@@ -149,8 +149,29 @@ public class RacketControler : MonoBehaviour{
         }
 
 
-    }
+        // Definig the limit of the racket's movement :
+        if (verticalPosition > boundary)
+        {
 
+
+            verticalPosition = boundary;
+
+
+        }
+
+
+        // Definig the limit of the racket's movement :
+        else if (verticalPosition < -boundary)
+        {
+
+
+            verticalPosition = -boundary;
+
+
+        }
+
+
+    }
 
 
 }
