@@ -137,13 +137,8 @@ public class RacketControler : MonoBehaviour{
         else if (rightRacketAuto)
         { 
         
-        
-            // Getting the posittion y of the ball :
-            float ballPositionY = ballPosition.position.y;
 
-
-            // Defining the movement of the racket based on the ball's position y :
-            transform.position = new Vector3(transform.position.x, ballPositionY, transform.position.z);
+            verticalPosition = Mathf.Lerp(verticalPosition, ballPosition.transform.position.y, 0.03f);
 
 
         }
