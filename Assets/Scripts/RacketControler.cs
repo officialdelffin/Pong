@@ -12,7 +12,7 @@ public class RacketControler : MonoBehaviour{
     private Vector3 movimentsPositions;
     private float verticalPosition;
     private float speed;
-    private float boundary;
+    private float boundaryVertical;
 
 
     // Function that runs once when the game starts :
@@ -30,7 +30,12 @@ public class RacketControler : MonoBehaviour{
 
 
         // Defining the boundary of the racket :
-        boundary = 3.5f;
+        boundaryVertical = 3.5f;
+
+
+        // Defining that the default right racket is automated for computer :
+        rightRacketAuto = true;
+        rightRacketPlayer = false;
 
 
     }
@@ -52,7 +57,7 @@ public class RacketControler : MonoBehaviour{
 
 
             // Defining the movement of the racket :
-            if (verticalPosition < boundary)
+            if (verticalPosition < boundaryVertical)
             {
 
 
@@ -70,54 +75,11 @@ public class RacketControler : MonoBehaviour{
 
 
             // Defining the movement of the racket :
-            if (verticalPosition > -boundary)
+            if (verticalPosition > -boundaryVertical)
             {
 
 
                 if (Input.GetKey(KeyCode.S))
-                {
-
-
-                    verticalPosition = verticalPosition - speed * Time.deltaTime;
-
-
-                }
-
-
-            }
-
-
-        }
-
-
-        // Defining the racket that will be used :
-        else if (rightRacketPlayer)
-        {
-
-            // Defining the movement of the racket :
-            if (verticalPosition < boundary)
-            {
-
-
-                if (Input.GetKey(KeyCode.UpArrow))
-                {
-
-
-                    verticalPosition = verticalPosition + speed * Time.deltaTime;
-
-
-                }
-
-
-            }
-
-
-            // Defining the movement of the racket :
-            if (verticalPosition > -boundary)
-            {
-
-
-                if (Input.GetKey(KeyCode.DownArrow))
                 {
 
 
@@ -141,26 +103,90 @@ public class RacketControler : MonoBehaviour{
             verticalPosition = Mathf.Lerp(verticalPosition, ballPosition.transform.position.y, 0.03f);
 
 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+
+                rightRacketAuto = false;
+                rightRacketPlayer = true;
+
+
+            }
+
+        }
+
+
+        // Defining the racket that will be used :
+        else if (rightRacketPlayer)
+        {
+
+            // Defining the movement of the racket :
+            if (verticalPosition < boundaryVertical)
+            {
+
+
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+
+
+                    verticalPosition = verticalPosition + speed * Time.deltaTime;
+
+
+                }
+
+
+            }
+
+
+            // Defining the movement of the racket :
+            if (verticalPosition > -boundaryVertical)
+            {
+
+
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+
+
+                    verticalPosition = verticalPosition - speed * Time.deltaTime;
+
+
+                }
+
+
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+
+                rightRacketAuto = true;
+                rightRacketPlayer = false;
+
+
+            }
+
+
         }
 
 
         // Definig the limit of the racket's movement :
-        if (verticalPosition > boundary)
+        if (verticalPosition > boundaryVertical)
         {
 
 
-            verticalPosition = boundary;
+            verticalPosition = boundaryVertical;
 
 
         }
 
 
         // Definig the limit of the racket's movement :
-        else if (verticalPosition < -boundary)
+        else if (verticalPosition < -boundaryVertical)
         {
 
 
-            verticalPosition = -boundary;
+            verticalPosition = -boundaryVertical;
 
 
         }

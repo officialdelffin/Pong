@@ -7,6 +7,7 @@ public class BallControler : MonoBehaviour{
 
     // Atributes :
     public Rigidbody2D rigidboryBall;
+    private float boundaryHorizontal;
     private float direction;
     private float speed;
     private Vector2 speedBall;
@@ -20,6 +21,10 @@ public class BallControler : MonoBehaviour{
         // Defining the initial position of the ball and the speed ball :
         transform.position = new Vector3(0, 0, 0);
         speed = 5f;
+
+
+        // Definindo the horizontal boundary :
+        boundaryHorizontal = 10f;
 
 
         // Defining the random direction of the ball :
@@ -83,7 +88,32 @@ public class BallControler : MonoBehaviour{
 
     // Function that runs every frame :
     void Update()
-    { }
+    {
+
+
+        // Defining action when the ball out of the horizontal boundary :
+        if (transform.position.x > boundaryHorizontal)
+        {
+
+
+            Debug.Log("Raquete da esquedar venceu!");
+
+
+        }
+
+
+        // Defining action when the ball out of the horizontal boundary :
+        if (transform.position.x < -boundaryHorizontal)
+        {
+
+
+            Debug.Log("Raquete da direita venceu!");
+
+
+        }
+
+
+    }
 
 
 }
