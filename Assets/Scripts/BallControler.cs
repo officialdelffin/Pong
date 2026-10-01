@@ -10,6 +10,7 @@ public class BallControler : MonoBehaviour{
     // Atributes :
     public Rigidbody2D rigidboryBall;
     public AudioClip audioCollider;
+    private float delay;
     private float boundaryHorizontal;
     private float direction;
     private float speed;
@@ -21,13 +22,17 @@ public class BallControler : MonoBehaviour{
     {
 
 
-        // Defining the initial position of the ball and the speed ball :
-        transform.position = new Vector3(0, 0, 0);
-        speed = 5f;
+        // Defining the delay time of the ball :
+        delay = 3f;
 
 
         // Definindo the horizontal boundary :
         boundaryHorizontal = 10f;
+
+
+        // Defining the initial position of the ball and the speed ball :
+        transform.position = new Vector3(0, 0, 0);
+        speed = 5f;
 
 
         // Defining the random direction of the ball :
@@ -99,8 +104,23 @@ public class BallControler : MonoBehaviour{
         {
 
 
+            // Show the message in the console that the left racket won :
             Debug.Log("Raquete da esquedar venceu!");
-            SceneManager.LoadScene(0);
+
+
+            // Defining the delay time of the ball and decreasing the time :
+            delay = delay - Time.deltaTime;
+
+
+            // if the delay is less than or equal to 0 :
+            if (delay <= 0)
+            {
+
+
+                SceneManager.LoadScene(0);
+
+
+            }
 
 
         }
@@ -110,14 +130,28 @@ public class BallControler : MonoBehaviour{
         if (transform.position.x < -boundaryHorizontal)
         {
 
-
+            // Show the message in the console that the right racket won :
             Debug.Log("Raquete da direita venceu!");
-            SceneManager.LoadScene(0);
+
+
+            // Defining the delay time of the ball and decreasing the time :
+            delay = delay - Time.deltaTime;
+
+
+            // if the delay is less than or equal to 0 :
+            if (delay <= 0)
+            {
+
+
+                SceneManager.LoadScene(0);
+
+
+            }
 
 
         }
-    
-    
+
+
     }
 
 
