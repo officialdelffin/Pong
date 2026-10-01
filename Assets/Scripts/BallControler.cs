@@ -1,5 +1,4 @@
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -99,7 +98,7 @@ public class BallControler : MonoBehaviour{
     {
 
 
-        // Defining action when the ball out of the horizontal boundary and reseting the scene :
+        // Defining action when the ball out of the horizontal boundary and reseting the scene : 
         if (transform.position.x > boundaryHorizontal)
         {
 

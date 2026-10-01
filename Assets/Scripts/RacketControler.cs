@@ -51,8 +51,8 @@ public class RacketControler : MonoBehaviour{
         transform.position = movimentsPositions;
 
 
-            // Defining the racket that will be used :
-            if (leftRacketPlayer)
+        // Defining the racket that will be used :
+        if (leftRacketPlayer)
         {
 
 
@@ -97,12 +97,14 @@ public class RacketControler : MonoBehaviour{
 
         // Defining the racket that will be used and is automated for computer :
         else if (rightRacketAuto)
-        { 
-        
-
-            verticalPosition = Mathf.Lerp(verticalPosition, ballPosition.transform.position.y, 0.03f);
+        {
 
 
+            // Defining and limiting the movement of the racket :
+            verticalPosition = Mathf.Lerp(verticalPosition, ballPosition.transform.position.y, 0.06f);
+
+
+            // If the space key is pressed, the right racket will be controlled by the player :
             if (Input.GetKeyDown(KeyCode.Space))
             {
 
@@ -112,6 +114,7 @@ public class RacketControler : MonoBehaviour{
 
 
             }
+
 
         }
 
@@ -156,6 +159,7 @@ public class RacketControler : MonoBehaviour{
             }
 
 
+            // If the space key is pressed, the right racket will be automated for computer :
             if (Input.GetKeyDown(KeyCode.Space))
             {
 
